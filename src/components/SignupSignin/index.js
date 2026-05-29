@@ -41,7 +41,7 @@ function SignupSigninComponent() {
                         // ...
                     })
                     .catch((error) => {
-                        const errorCode = error.code;
+                        
                         const errorMessage = error.message;
                         toast.error(errorMessage);
                         setLoading(false);
@@ -74,7 +74,7 @@ function SignupSigninComponent() {
                     // ...
                 })
                 .catch((error) => {
-                    const errorCode = error.code;
+                    
                     const errorMessage = error.message;
                     setLoading(false);
                     toast.error(errorMessage);
@@ -123,7 +123,7 @@ function SignupSigninComponent() {
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
                 const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
+                
                 // The signed-in user info.
                 const user = result.user;
                 console.log("User>>>", user);
@@ -136,7 +136,7 @@ function SignupSigninComponent() {
             }).catch((error) => {
                 setLoading(false);
                 // Handle Errors here.
-                const errorCode = error.code;
+                
                 const errorMessage = error.message;
                 toast.error(errorMessage);
             });

@@ -15,7 +15,7 @@ function Header() {
     if (user) {
       navigate("/dashboard");
     }
-  }, [user, loading]);
+  }, [user, loading,navigate]);
 
   function logoutFnc() {
     try {

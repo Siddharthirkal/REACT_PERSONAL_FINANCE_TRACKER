@@ -80,14 +80,18 @@ function Dashboard() {
   }
 
   useEffect(() => {
-    if (user) {
-      fetchTransactions();
-    }
-  }, [user]);
+  if (user) {
+    fetchTransactions();
+  }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [user]);
 
   useEffect(() => {
-    calculateBalance();
-  }, [transactions]);
+  calculateBalance();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [transactions]);
 
   const calculateBalance = () => {
   let incomeTotal = 0;
